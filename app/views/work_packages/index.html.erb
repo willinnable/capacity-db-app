@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Packages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Target release date</th>
+      <th>Release gate</th>
+      <th>Market</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_packages.each do |work_package| %>
+      <tr>
+        <td><%= work_package.name %></td>
+        <td><%= work_package.code %></td>
+        <td><%= work_package.target_release_date %></td>
+        <td><%= work_package.release_gate.code %></td>
+        <td><%= work_package.market.name %></td>
+        <td><%= link_to 'Show', work_package %></td>
+        <td><%= link_to 'Edit', edit_work_package_path(work_package) %></td>
+        <td><%= link_to 'Destroy', work_package, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Package', new_work_package_path %>

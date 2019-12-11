@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :releases
+  resources :release_gates
+  resources :work_packages
   root to: 'welcome#index'
 
   resources :users

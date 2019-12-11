@@ -1,0 +1,2 @@
+module ReleaseGatesHelper
+end
