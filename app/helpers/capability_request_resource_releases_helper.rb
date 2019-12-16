@@ -1,0 +1,2 @@
+module CapabilityRequestResourceReleasesHelper
+end

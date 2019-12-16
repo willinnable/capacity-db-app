@@ -1,0 +1,43 @@
+<%= form_with(model: work_package, local: true) do |form| %>
+  <% if work_package.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_package.errors.count, "error") %> prohibited this work_package from being saved:</h2>
+
+      <ul>
+        <% work_package.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target_release_date %>
+    <%= form.date_select :target_release_date %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :release_gate_id %>
+    <%= form.collection_select :release_gate_id, ReleaseGate.all, :id, :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :market_id %>
+    <%= form.collection_select :market_id, Market.all, :id, :code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

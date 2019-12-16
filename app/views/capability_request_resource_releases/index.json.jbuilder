@@ -1,0 +1,1 @@
+json.array! @capability_request_resource_releases, partial: "capability_request_resource_releases/capability_request_resource_release", as: :capability_request_resource_release

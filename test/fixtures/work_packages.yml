@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  target_release_date: 2019-12-11
+  actual_release_date: MyString
+  date: MyString
+  release_gate_id: MyString
+  integer: MyString
+  market_id: 1
+
+two:
+  name: MyString
+  code: MyString
+  target_release_date: 2019-12-11
+  actual_release_date: MyString
+  date: MyString
+  release_gate_id: MyString
+  integer: MyString
+  market_id: 1

@@ -1,0 +1,27 @@
+<%= form_with(model: release_gate, local: true) do |form| %>
+  <% if release_gate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(release_gate.errors.count, "error") %> prohibited this release_gate from being saved:</h2>
+
+      <ul>
+        <% release_gate.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

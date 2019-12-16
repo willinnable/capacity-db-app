@@ -1,0 +1,1 @@
+json.partial! "capability_request_resource_releases/capability_request_resource_release", capability_request_resource_release: @capability_request_resource_release

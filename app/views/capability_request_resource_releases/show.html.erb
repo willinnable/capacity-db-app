@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Capability:</strong>
+  <%= @capability_request_resource_release.capability_id %>
+</p>
+
+<p>
+  <strong>Resource:</strong>
+  <%= @capability_request_resource_release.resource_id %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @capability_request_resource_release.release_id %>
+</p>
+
+<%= link_to 'Edit', edit_capability_request_resource_release_path(@capability_request_resource_release) %> |
+<%= link_to 'Back', capability_request_resource_releases_path %>

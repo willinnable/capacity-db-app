@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @capability_request.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @capability_request.code %>
+</p>
+
+<p>
+  <strong>Work package:</strong>
+  <%= @capability_request.work_package.name %>
+</p>
+
+<p>
+  <strong>Complexity:</strong>
+  <%= @capability_request.complexity.name %>
+</p>
+
+<p>
+  <strong>Release gate:</strong>
+  <%= @capability_request.release_gate.code %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @capability_request.comments %>
+</p>
+
+<%= link_to 'Edit', edit_capability_request_path(@capability_request) %> |
+<%= link_to 'Back', capability_requests_path %>

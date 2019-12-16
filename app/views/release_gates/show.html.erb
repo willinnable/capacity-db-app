@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @release_gate.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @release_gate.description %>
+</p>
+
+<%= link_to 'Edit', edit_release_gate_path(@release_gate) %> |
+<%= link_to 'Back', release_gates_path %>

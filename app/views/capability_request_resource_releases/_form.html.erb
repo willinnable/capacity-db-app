@@ -1,0 +1,37 @@
+<%= form_with(model: capability_request_resource_release, local: true) do |form| %>
+  <% if capability_request_resource_release.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(capability_request_resource_release.errors.count, "error") %> prohibited this capability_request_resource_release from being saved:</h2>
+
+      <ul>
+        <% capability_request_resource_release.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :capability_request_id %>
+    <%= form.collection_select :capability_request_id, CapabilityRequest.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resource_id %>
+    <%= form.collection_select :resource_id, Resource.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_id %>
+    <%= form.collection_select :release_id, Release.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :demand %>
+    <%= form.number_field :demand %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

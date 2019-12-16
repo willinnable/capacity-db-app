@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Capability Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Work package</th>
+      <th>Complexity</th>
+      <th>Release gate</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @capability_requests.each do |capability_request| %>
+      <tr>
+        <td><%= capability_request.name %></td>
+        <td><%= capability_request.code %></td>
+        <td><%= capability_request.work_package.name%></td>
+        <td><%= capability_request.complexity.name %></td>
+        <td><%= capability_request.release_gate.code %></td>
+        <td><%= capability_request.comments %></td>
+        <td><%= link_to 'Show', capability_request %></td>
+        <td><%= link_to 'Edit', edit_capability_request_path(capability_request) %></td>
+        <td><%= link_to 'Destroy', capability_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Capability Request', new_capability_request_path %>

@@ -1,0 +1,2 @@
+module CapabilityRequestsHelper
+end

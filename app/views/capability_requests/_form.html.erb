@@ -1,0 +1,47 @@
+<%= form_with(model: capability_request, local: true) do |form| %>
+  <% if capability_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(capability_request.errors.count, "error") %> prohibited this capability_request from being saved:</h2>
+
+      <ul>
+        <% capability_request.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_gate_id %>
+    <%= form.collection_select :release_gate_id, ReleaseGate.all, :id, :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_package_id %>
+    <%= form.collection_select :work_package_id, WorkPackage.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complexity_id %>
+    <%= form.collection_select :complexity_id, Complexity.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_field :comments %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :capability_request_resource_releases
+  resources :capability_request_resources
+  resources :complexities
+  resources :capability_requests
+  resources :resources
+  resources :releases
+  resources :release_gates
+  resources :work_packages
   root to: 'welcome#index'
 
   resources :users

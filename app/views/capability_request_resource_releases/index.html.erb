@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Capability Request Resource Releases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Resource</th>
+      <th>Release</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @capability_request_resource_releases.each do |capability_request_resource_release| %>
+      <tr>
+        <td><%= capability_request_resource_release.capability_id %></td>
+        <td><%= capability_request_resource_release.resource_id %></td>
+        <td><%= capability_request_resource_release.release_id %></td>
+        <td><%= link_to 'Show', capability_request_resource_release %></td>
+        <td><%= link_to 'Edit', edit_capability_request_resource_release_path(capability_request_resource_release) %></td>
+        <td><%= link_to 'Destroy', capability_request_resource_release, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Capability Request Resource Release', new_capability_request_resource_release_path %>
