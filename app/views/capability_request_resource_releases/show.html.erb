@@ -2,17 +2,17 @@
 
 <p>
   <strong>Capability:</strong>
-  <%= @capability_request_resource_release.capability_id %>
+  <%= @capability_request_resource_release.capability_request.name %>
 </p>
 
 <p>
   <strong>Resource:</strong>
-  <%= @capability_request_resource_release.resource_id %>
+  <%= @capability_request_resource_release.resource.name %>
 </p>
 
 <p>
   <strong>Release:</strong>
-  <%= @capability_request_resource_release.release_id %>
+  <%= @capability_request_resource_release.release.name %>
 </p>
 
 <%= link_to 'Edit', edit_capability_request_resource_release_path(@capability_request_resource_release) %> |

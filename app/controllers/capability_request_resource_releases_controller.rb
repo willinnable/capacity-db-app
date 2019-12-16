@@ -69,6 +69,6 @@ class CapabilityRequestResourceReleasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def capability_request_resource_release_params
-      params.require(:capability_request_resource_release).permit(:capability_id, :resource_id, :release_id, :demand)
+      params.require(:capability_request_resource_release).permit(:capability_request_id, :resource_id, :release_id, :demand)
     end
 end
